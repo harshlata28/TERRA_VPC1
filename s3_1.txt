@@ -1,0 +1,17 @@
+provider "aws" {
+  access_key = "********************"
+  secret_key = "*****************************"
+  region     = "ap-south-1"
+}
+
+resource "aws_s3_bucket" "harsh_467" {
+  bucket = "albtros"
+  acl    = "public-read"
+  tags = {
+    Name        = "harsh_46700"
+    Environment = "Dev"
+  }
+  versioning {
+    enabled = true
+  }
+}
