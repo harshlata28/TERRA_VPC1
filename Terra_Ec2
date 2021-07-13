@@ -1,0 +1,28 @@
+provider "aws"{
+access_key = "AKIAYGTU2AWTYUFATM7D"
+secret_key = "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"
+region = "ap-south-1"
+}
+
+#Amazon_linux_instance
+
+resource "aws_instance" "Ec2"{
+ami = "ami-00bf4ae5a7909786c "
+instance_type = "t2.micro"
+ tags = {
+
+Name = "Ec2"
+}
+}
+
+#ubantu_instance
+
+resource "aws_instance" "main"{
+ami = "ami-04bde106886a53080"
+instance_type ="t2.micro"
+
+tags = {
+
+Name = "main"
+}
+}
